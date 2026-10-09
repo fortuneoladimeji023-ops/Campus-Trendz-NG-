@@ -1,0 +1,102 @@
+rules_version = '2';
+
+service firebase.storage {
+
+    match /b/{bucket}/o {
+
+
+        function signedIn() {
+
+            return request.auth != null;
+
+        }
+
+
+        function userDoc() {
+
+            return firestore.get(
+                /databases/(default)/documents/users/$(request.auth.uid)
+            ).data;
+
+        }
+
+
+        function isAdmin() {
+
+            return signedIn()
+                &&
+                userDoc().role in [
+                    'superAdmin',
+                    'contentAdmin',
+                    'editor'
+                ];
+
+        }
+
+
+
+        match /posts/{uid}/{fileName} {
+
+
+            /*
+                Anyone can view
+                published images.
+            */
+
+            allow read:
+                if true;
+
+
+
+            /*
+                Only admins can upload.
+
+                Maximum:
+                5MB.
+
+                Accepted:
+                JPG
+                PNG
+                WebP
+            */
+
+            allow write:
+                if isAdmin()
+
+                &&
+
+                request.resource.size <
+                5 * 1024 * 1024
+
+                &&
+
+                request.resource.contentType.matches(
+                    'image/(jpeg|png|webp)'
+                );
+
+
+
+            /*
+                Only Super Admin
+                and Content Admin
+                can delete images.
+            */
+
+            allow delete:
+                if isAdmin()
+                &&
+                (
+                    userDoc().role ==
+                    'superAdmin'
+
+                    ||
+
+                    userDoc().role ==
+                    'contentAdmin'
+                );
+
+        }
+
+    }
+
+}

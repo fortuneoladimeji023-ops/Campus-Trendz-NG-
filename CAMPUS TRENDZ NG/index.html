@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Trendz NG™ | Your Campus. Your Voice. Your Trend.</title>
+
+    <meta name="description" content="Campus Trendz NG™ - Your hub for campus news, entertainment, competitions, polls, trends and student activities across Nigeria.">
+
+    <meta name="keywords" content="Campus Trendz NG, Nigerian students, campus news, student competitions, school polls, campus entertainment">
+
+    <meta name="author" content="Campus Trendz NG™">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<script
+    type="module"
+    src="public-posts.js">
+</script>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            <div class="logo-mark">
+                CT
+            </div>
+
+            <div class="logo-text">
+                <strong>Campus Trendz</strong>
+                <span>NG™</span>
+            </div>
+        </a>
+
+        <nav class="navbar" id="navbar">
+
+            <a href="#home" class="nav-link active">Home</a>
+
+            <a href="#trending" class="nav-link">Trending</a>
+
+            <a href="#competitions" class="nav-link">Competitions</a>
+
+            <a href="#polls" class="nav-link">Polls</a>
+
+            <a href="#about" class="nav-link">About</a>
+
+            <a href="#contact" class="nav-link">Contact</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="search-btn" id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="#contact" class="join-btn">
+                Join Us
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     SEARCH OVERLAY
+========================= -->
+
+<div class="search-overlay" id="searchOverlay">
+
+    <button class="close-search" id="closeSearch">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="search-box">
+
+        <h2>Search Campus Trendz</h2>
+
+        <p>Find news, competitions, polls and campus trends.</p>
+
+        <div class="search-input">
+
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search Campus Trendz...">
+
+            <button>
+                <i class="fa-solid fa-search"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--===========================
+   TRENDING SECTION
+===========================-->
+<section class="trending-section">
+
+    <div class="section-heading">
+
+        <h2>
+            Latest on Campus Trendz 🔥
+        </h2>
+
+        <p>
+            Fresh stories, campus updates
+            and trending content.
+        </p>
+
+    </div>
+
+
+    <div id="postsGrid"
+         class="posts-grid">
+
+        <!-- Firebase posts will appear here -->
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-bg"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-fire"></i>
+                Nigeria's Campus Trend Hub
+            </span>
+
+            <h1>
+                Your Campus.
+                <span>Your Voice.</span>
+                Your Trend.
+            </h1>
+
+            <p>
+                Welcome to Campus Trendz NG™ — the home of campus
+                entertainment, competitions, polls, student activities,
+                trending stories and everything happening around Nigerian
+                campuses.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#trending" class="btn btn-primary">
+                    Explore Trends
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#competitions" class="btn btn-outline">
+                    View Competitions
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong class="counter">100+</strong>
+                    <span>Campus Activities</span>
+                </div>
+
+                <div>
+                    <strong class="counter">50+</strong>
+                    <span>Schools Reached</span>
+                </div>
+
+                <div>
+                    <strong class="counter">1K+</strong>
+                    <span>Community</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="live-label">
+                <span></span> LIVE
+            </div>
+
+            <div class="hero-card-content">
+
+                <span>🔥 CAMPUS TREND</span>
+
+                <h2>
+                    What's Trending
+                    On Campus?
+                </h2>
+
+                <p>
+                    Stay connected with the latest campus
+                    conversations, competitions and entertainment.
+                </p>
+
+                <a href="#trending">
+                    Discover Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TRENDING
+========================= -->
+
+<section class="section" id="trending">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-tag">
+                    <i class="fa-solid fa-fire"></i>
+                    What's Hot
+                </span>
+
+                <h2>Trending On Campus</h2>
+
+                <p>
+                    Catch up with the conversations and activities
+                    making waves across campuses.
+                </p>
+            </div>
+
+            <a href="#" class="view-all">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="trend-grid">
+
+            <article class="trend-card featured">
+
+                <div class="trend-image trend-one">
+
+                    <span class="category">FEATURED</span>
+
+                </div>
+
+                <div class="trend-content">
+
+                    <span class="small-label">
+                        Campus Spotlight
+                    </span>
+
+                    <h3>
+                        The Campus Stories Everyone Is Talking About
+                    </h3>
+
+                    <p>
+                        Discover what's making students talk,
+                        laugh and participate across Nigerian campuses.
+                    </p>
+
+                    <a href="#">
+                        Read Story
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="trend-card">
+
+                <div class="trend-image trend-two">
+
+                    <span class="category">TRENDING</span>
+
+                </div>
+
+                <div class="trend-content">
+
+                    <span class="small-label">
+                        Entertainment
+                    </span>
+
+                    <h3>
+                        Campus Entertainment & Activities
+                    </h3>
+
+                    <a href="#">
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="trend-card">
+
+                <div class="trend-image trend-three">
+
+                    <span class="category">HOT</span>
+
+                </div>
+
+                <div class="trend-content">
+
+                    <span class="small-label">
+                        Community
+                    </span>
+
+                    <h3>
+                        What Are Students Talking About?
+                    </h3>
+
+                    <a href="#">
+                        Discover
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMPETITIONS
+========================= -->
+
+<section class="section competitions-section" id="competitions">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-trophy"></i>
+                Campus Competitions
+            </span>
+
+            <h2>Compete. Connect. Get Recognized.</h2>
+
+            <p>
+                Participate in Campus Trendz NG™ competitions
+                and let your campus community decide.
+            </p>
+
+        </div>
+
+
+        <div class="competition-grid">
+
+            <article class="competition-card">
+
+                <div class="competition-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+
+                <span>01</span>
+
+                <h3>Face of the Week</h3>
+
+                <p>
+                    Represent yourself, your school and your personality.
+                    Enter, gather votes and get recognized.
+                </p>
+
+                <a href="#">
+                    Enter Competition
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="competition-card">
+
+                <div class="competition-icon">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+
+                <span>02</span>
+
+                <h3>Mr & Mrs Campus</h3>
+
+                <p>
+                    A campus personality competition designed to
+                    showcase confidence, creativity and impact.
+                </p>
+
+                <a href="#">
+                    View Competition
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="competition-card">
+
+                <div class="competition-icon">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+
+                <span>03</span>
+
+                <h3>Drip Lord</h3>
+
+                <p>
+                    Showcase your style and let the campus community
+                    decide who brings the ultimate drip.
+                </p>
+
+                <a href="#">
+                    Participate
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="competition-card">
+
+                <div class="competition-icon">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+
+                <span>04</span>
+
+                <h3>School Rage</h3>
+
+                <p>
+                    Schools go head-to-head in exciting community
+                    voting battles.
+                </p>
+
+                <a href="#">
+                    View Battle
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POLLS
+========================= -->
+
+<section class="section polls-section" id="polls">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-tag">
+                    <i class="fa-solid fa-square-poll-vertical"></i>
+                    Campus Polls
+                </span>
+
+                <h2>Your Vote. Your Voice.</h2>
+
+                <p>
+                    Participate in our community polls and see
+                    what students across campuses think.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="poll-card">
+
+            <div class="poll-info">
+
+                <span class="poll-status">
+                    <i class="fa-solid fa-circle"></i>
+                    LIVE POLL
+                </span>
+
+                <h3>
+                    Which campus activity should return next?
+                </h3>
+
+                <p>
+                    Cast your vote and share the poll with your
+                    schoolmates.
+                </p>
+
+            </div>
+
+
+            <div class="poll-options">
+
+                <button class="poll-option">
+
+                    <span>
+                        Campus Competitions
+                    </span>
+
+                    <strong>0%</strong>
+
+                </button>
+
+
+                <button class="poll-option">
+
+                    <span>
+                        Inter-School Battles
+                    </span>
+
+                    <strong>0%</strong>
+
+                </button>
+
+
+                <button class="poll-option">
+
+                    <span>
+                        Entertainment Shows
+                    </span>
+
+                    <strong>0%</strong>
+
+                </button>
+
+
+                <button class="poll-option">
+
+                    <span>
+                        Student Awards
+                    </span>
+
+                    <strong>0%</strong>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CAMPUS TRENDZ
+========================= -->
+
+<section class="section why-section">
+
+    <div class="container why-container">
+
+        <div class="why-text">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-bolt"></i>
+                Why Campus Trendz?
+            </span>
+
+            <h2>
+                More Than A Channel.
+                It's A Campus Community.
+            </h2>
+
+            <p>
+                Campus Trendz NG™ connects students, creators,
+                businesses and communities through entertainment,
+                competitions, conversations and campus activities.
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+
+                    <div>
+                        <h4>Campus Updates</h4>
+                        <p>
+                            Stay informed about activities and trends.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <h4>Student Community</h4>
+                        <p>
+                            Connect and participate with students.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+
+                    <div>
+                        <h4>Business Promotion</h4>
+                        <p>
+                            Put your brand in front of students.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-card-inner">
+
+                <span>CT</span>
+
+                <h3>
+                    CAMPUS
+                    <strong>TRENDZ</strong>
+                </h3>
+
+                <p>
+                    Your Campus. Your Voice. Your Trend.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ADVERTISE
+========================= -->
+
+<section class="advert-section">
+
+    <div class="container advert-container">
+
+        <div>
+
+            <span class="section-tag light">
+                <i class="fa-solid fa-bullhorn"></i>
+                Advertise With Us
+            </span>
+
+            <h2>
+                Want Students To See Your Brand?
+            </h2>
+
+            <p>
+                Promote your business, event, product or service
+                to the Campus Trendz NG™ community.
+            </p>
+
+        </div>
+
+        <a href="#contact" class="btn btn-white">
+            Advertise Now
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about-section" id="about">
+
+    <div class="container about-container">
+
+        <div class="about-logo">
+            <div class="big-logo">
+                CT
+            </div>
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-tag">
+                About Us
+            </span>
+
+            <h2>
+                Welcome To Campus Trendz NG™
+            </h2>
+
+            <p>
+                Campus Trendz NG™ is a student-focused digital
+                community created to bring campus entertainment,
+                competitions, conversations, trends and opportunities
+                closer to students.
+            </p>
+
+            <p>
+                From campus competitions to polls, student features,
+                business promotions and trending conversations,
+                Campus Trendz gives students a platform to participate,
+                connect and be heard.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">
+                Connect With Us
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta-section">
+
+    <div class="container cta-content">
+
+        <span>
+            🔥 THE TREND STARTS HERE
+        </span>
+
+        <h2>
+            Don't Just Watch The Trend.
+            Be Part Of It.
+        </h2>
+
+        <p>
+            Follow Campus Trendz NG™ and stay connected
+            with what's happening around campus communities.
+        </p>
+
+        <a href="#contact" class="btn btn-white">
+            Join Campus Trendz
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-paper-plane"></i>
+                Contact Us
+            </span>
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Want to advertise, collaborate, participate or
+                send us a campus story?
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <a href="https://wa.me/2349062048795"
+               class="contact-card"
+               target="_blank">
+
+                <div class="contact-icon whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with our admin</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <a href="#"
+               class="contact-card">
+
+                <div class="contact-icon instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div>
+                    <h3>Instagram</h3>
+                    <p>Follow Campus Trendz</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <a href="#"
+               class="contact-card">
+
+                <div class="contact-icon facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+
+                <div>
+                    <h3>Facebook</h3>
+                    <p>Join our community</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <a href="mailto:campustrendzng@gmail.com"
+               class="contact-card">
+
+                <div class="contact-icon email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>Send us a message</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="logo footer-logo">
+
+                <div class="logo-mark">
+                    CT
+                </div>
+
+                <div class="logo-text">
+                    <strong>Campus Trendz</strong>
+                    <span>NG™</span>
+                </div>
+
+            </a>
+
+            <p>
+                Your Campus. Your Voice. Your Trend.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://wa.me/2349062048795">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Explore</h4>
+
+            <a href="#trending">Trending</a>
+            <a href="#competitions">Competitions</a>
+            <a href="#polls">Polls</a>
+            <a href="#about">About Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Community</h4>
+
+            <a href="#">Face of the Week</a>
+            <a href="#">Mr & Mrs Campus</a>
+            <a href="#">School Rage</a>
+            <a href="#">Drip Lord</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Business</h4>
+
+            <a href="#contact">Advertise</a>
+            <a href="#contact">Partnership</a>
+            <a href="#contact">Collaboration</a>
+            <a href="#contact">Contact Us</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © <span id="year"></span> Campus Trendz NG™.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Built for the Campus Community.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button class="back-top" id="backTop">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Trendz NG™ | Your Campus. Your Voice. Your Trend.</title>
+
+    <meta name="description" content="Campus Trendz NG™ - Your hub for campus news, entertainment, competitions, polls, trends and student activities across Nigeria.">
+
+    <meta name="keywords" content="Campus Trendz NG, Nigerian students, campus news, student competitions, school polls, campus entertainment">
+
+    <meta name="author" content="Campus Trendz NG™">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            <div class="logo-mark">
+                CT
+            </div>
+
+            <div class="logo-text">
+                <strong>Campus Trendz</strong>
+                <span>NG™</span>
+            </div>
+        </a>
+
+        <nav class="navbar" id="navbar">
+
+            <a href="#home" class="nav-link active">Home</a>
+
+            <a href="#trending" class="nav-link">Trending</a>
+
+            <a href="#competitions" class="nav-link">Competitions</a>
+
+            <a href="#polls" class="nav-link">Polls</a>
+
+            <a href="#about" class="nav-link">About</a>
+
+            <a href="#contact" class="nav-link">Contact</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="search-btn" id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="#contact" class="join-btn">
+                Join Us
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     SEARCH OVERLAY
+========================= -->
+
+<div class="search-overlay" id="searchOverlay">
+
+    <button class="close-search" id="closeSearch">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="search-box">
+
+        <h2>Search Campus Trendz</h2>
+
+        <p>Find news, competitions, polls and campus trends.</p>
+
+        <div class="search-input">
+
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search Campus Trendz...">
+
+            <button>
+                <i class="fa-solid fa-search"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-bg"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                <i class="fa-solid fa-fire"></i>
+                Nigeria's Campus Trend Hub
+            </span>
+
+            <h1>
+                Your Campus.
+                <span>Your Voice.</span>
+                Your Trend.
+            </h1>
+
+            <p>
+                Welcome to Campus Trendz NG™ — the home of campus
+                entertainment, competitions, polls, student activities,
+                trending stories and everything happening around Nigerian
+                campuses.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#trending" class="btn btn-primary">
+                    Explore Trends
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#competitions" class="btn btn-outline">
+                    View Competitions
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong class="counter">100+</strong>
+                    <span>Campus Activities</span>
+                </div>
+
+                <div>
+                    <strong class="counter">50+</strong>
+                    <span>Schools Reached</span>
+                </div>
+
+                <div>
+                    <strong class="counter">1K+</strong>
+                    <span>Community</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="live-label">
+                <span></span> LIVE
+            </div>
+
+            <div class="hero-card-content">
+
+                <span>🔥 CAMPUS TREND</span>
+
+                <h2>
+                    What's Trending
+                    On Campus?
+                </h2>
+
+                <p>
+                    Stay connected with the latest campus
+                    conversations, competitions and entertainment.
+                </p>
+
+                <a href="#trending">
+                    Discover Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TRENDING
+========================= -->
+
+<section class="section" id="trending">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-tag">
+                    <i class="fa-solid fa-fire"></i>
+                    What's Hot
+                </span>
+
+                <h2>Trending On Campus</h2>
+
+                <p>
+                    Catch up with the conversations and activities
+                    making waves across campuses.
+                </p>
+            </div>
+
+            <a href="#" class="view-all">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="trend-grid">
+
+            <article class="trend-card featured">
+
+                <div class="trend-image trend-one">
+
+                    <span class="category">FEATURED</span>
+
+                </div>
+
+                <div class="trend-content">
+
+                    <span class="small-label">
+                        Campus Spotlight
+                    </span>
+
+                    <h3>
+                        The Campus Stories Everyone Is Talking About
+                    </h3>
+
+                    <p>
+                        Discover what's making students talk,
+                        laugh and participate across Nigerian campuses.
+                    </p>
+
+                    <a href="#">
+                        Read Story
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="trend-card">
+
+                <div class="trend-image trend-two">
+
+                    <span class="category">TRENDING</span>
+
+                </div>
+
+                <div class="trend-content">
+
+                    <span class="small-label">
+                        Entertainment
+                    </span>
+
+                    <h3>
+                        Campus Entertainment & Activities
+                    </h3>
+
+                    <a href="#">
+                        Explore
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="trend-card">
+
+                <div class="trend-image trend-three">
+
+                    <span class="category">HOT</span>
+
+                </div>
+
+                <div class="trend-content">
+
+                    <span class="small-label">
+                        Community
+                    </span>
+
+                    <h3>
+                        What Are Students Talking About?
+                    </h3>
+
+                    <a href="#">
+                        Discover
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COMPETITIONS
+========================= -->
+
+<section class="section competitions-section" id="competitions">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-trophy"></i>
+                Campus Competitions
+            </span>
+
+            <h2>Compete. Connect. Get Recognized.</h2>
+
+            <p>
+                Participate in Campus Trendz NG™ competitions
+                and let your campus community decide.
+            </p>
+
+        </div>
+
+
+        <div class="competition-grid">
+
+            <article class="competition-card">
+
+                <div class="competition-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+
+                <span>01</span>
+
+                <h3>Face of the Week</h3>
+
+                <p>
+                    Represent yourself, your school and your personality.
+                    Enter, gather votes and get recognized.
+                </p>
+
+                <a href="#">
+                    Enter Competition
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="competition-card">
+
+                <div class="competition-icon">
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+
+                <span>02</span>
+
+                <h3>Mr & Mrs Campus</h3>
+
+                <p>
+                    A campus personality competition designed to
+                    showcase confidence, creativity and impact.
+                </p>
+
+                <a href="#">
+                    View Competition
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="competition-card">
+
+                <div class="competition-icon">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+
+                <span>03</span>
+
+                <h3>Drip Lord</h3>
+
+                <p>
+                    Showcase your style and let the campus community
+                    decide who brings the ultimate drip.
+                </p>
+
+                <a href="#">
+                    Participate
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <article class="competition-card">
+
+                <div class="competition-icon">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+
+                <span>04</span>
+
+                <h3>School Rage</h3>
+
+                <p>
+                    Schools go head-to-head in exciting community
+                    voting battles.
+                </p>
+
+                <a href="#">
+                    View Battle
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POLLS
+========================= -->
+
+<section class="section polls-section" id="polls">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-tag">
+                    <i class="fa-solid fa-square-poll-vertical"></i>
+                    Campus Polls
+                </span>
+
+                <h2>Your Vote. Your Voice.</h2>
+
+                <p>
+                    Participate in our community polls and see
+                    what students across campuses think.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="poll-card">
+
+            <div class="poll-info">
+
+                <span class="poll-status">
+                    <i class="fa-solid fa-circle"></i>
+                    LIVE POLL
+                </span>
+
+                <h3>
+                    Which campus activity should return next?
+                </h3>
+
+                <p>
+                    Cast your vote and share the poll with your
+                    schoolmates.
+                </p>
+
+            </div>
+
+
+            <div class="poll-options">
+
+                <button class="poll-option">
+
+                    <span>
+                        Campus Competitions
+                    </span>
+
+                    <strong>0%</strong>
+
+                </button>
+
+
+                <button class="poll-option">
+
+                    <span>
+                        Inter-School Battles
+                    </span>
+
+                    <strong>0%</strong>
+
+                </button>
+
+
+                <button class="poll-option">
+
+                    <span>
+                        Entertainment Shows
+                    </span>
+
+                    <strong>0%</strong>
+
+                </button>
+
+
+                <button class="poll-option">
+
+                    <span>
+                        Student Awards
+                    </span>
+
+                    <strong>0%</strong>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY CAMPUS TRENDZ
+========================= -->
+
+<section class="section why-section">
+
+    <div class="container why-container">
+
+        <div class="why-text">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-bolt"></i>
+                Why Campus Trendz?
+            </span>
+
+            <h2>
+                More Than A Channel.
+                It's A Campus Community.
+            </h2>
+
+            <p>
+                Campus Trendz NG™ connects students, creators,
+                businesses and communities through entertainment,
+                competitions, conversations and campus activities.
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+
+                    <div>
+                        <h4>Campus Updates</h4>
+                        <p>
+                            Stay informed about activities and trends.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <h4>Student Community</h4>
+                        <p>
+                            Connect and participate with students.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+
+                    <div>
+                        <h4>Business Promotion</h4>
+                        <p>
+                            Put your brand in front of students.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-card-inner">
+
+                <span>CT</span>
+
+                <h3>
+                    CAMPUS
+                    <strong>TRENDZ</strong>
+                </h3>
+
+                <p>
+                    Your Campus. Your Voice. Your Trend.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ADVERTISE
+========================= -->
+
+<section class="advert-section">
+
+    <div class="container advert-container">
+
+        <div>
+
+            <span class="section-tag light">
+                <i class="fa-solid fa-bullhorn"></i>
+                Advertise With Us
+            </span>
+
+            <h2>
+                Want Students To See Your Brand?
+            </h2>
+
+            <p>
+                Promote your business, event, product or service
+                to the Campus Trendz NG™ community.
+            </p>
+
+        </div>
+
+        <a href="#contact" class="btn btn-white">
+            Advertise Now
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about-section" id="about">
+
+    <div class="container about-container">
+
+        <div class="about-logo">
+            <div class="big-logo">
+                CT
+            </div>
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-tag">
+                About Us
+            </span>
+
+            <h2>
+                Welcome To Campus Trendz NG™
+            </h2>
+
+            <p>
+                Campus Trendz NG™ is a student-focused digital
+                community created to bring campus entertainment,
+                competitions, conversations, trends and opportunities
+                closer to students.
+            </p>
+
+            <p>
+                From campus competitions to polls, student features,
+                business promotions and trending conversations,
+                Campus Trendz gives students a platform to participate,
+                connect and be heard.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">
+                Connect With Us
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta-section">
+
+    <div class="container cta-content">
+
+        <span>
+            🔥 THE TREND STARTS HERE
+        </span>
+
+        <h2>
+            Don't Just Watch The Trend.
+            Be Part Of It.
+        </h2>
+
+        <p>
+            Follow Campus Trendz NG™ and stay connected
+            with what's happening around campus communities.
+        </p>
+
+        <a href="#contact" class="btn btn-white">
+            Join Campus Trendz
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <span class="section-tag">
+                <i class="fa-solid fa-paper-plane"></i>
+                Contact Us
+            </span>
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Want to advertise, collaborate, participate or
+                send us a campus story?
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <a href="https://wa.me/2349062048795"
+               class="contact-card"
+               target="_blank">
+
+                <div class="contact-icon whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Chat with our admin</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <a href="#"
+               class="contact-card">
+
+                <div class="contact-icon instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div>
+                    <h3>Instagram</h3>
+                    <p>Follow Campus Trendz</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <a href="#"
+               class="contact-card">
+
+                <div class="contact-icon facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+
+                <div>
+                    <h3>Facebook</h3>
+                    <p>Join our community</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <a href="mailto:campustrendzng@gmail.com"
+               class="contact-card">
+
+                <div class="contact-icon email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h3>Email</h3>
+                    <p>Send us a message</p>
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="#home" class="logo footer-logo">
+
+                <div class="logo-mark">
+                    CT
+                </div>
+
+                <div class="logo-text">
+                    <strong>Campus Trendz</strong>
+                    <span>NG™</span>
+                </div>
+
+            </a>
+
+            <p>
+                Your Campus. Your Voice. Your Trend.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://wa.me/2349062048795">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Explore</h4>
+
+            <a href="#trending">Trending</a>
+            <a href="#competitions">Competitions</a>
+            <a href="#polls">Polls</a>
+            <a href="#about">About Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Community</h4>
+
+            <a href="#">Face of the Week</a>
+            <a href="#">Mr & Mrs Campus</a>
+            <a href="#">School Rage</a>
+            <a href="#">Drip Lord</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Business</h4>
+
+            <a href="#contact">Advertise</a>
+            <a href="#contact">Partnership</a>
+            <a href="#contact">Collaboration</a>
+            <a href="#contact">Contact Us</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © <span id="year"></span> Campus Trendz NG™.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Built for the Campus Community.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button class="back-top" id="backTop">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,577 @@
+:root {
+    --red: #e5092f;
+    --dark-red: #b80025;
+
+    --blue: #0757d5;
+    --dark-blue: #063b91;
+
+    --white: #ffffff;
+
+    --black: #11131a;
+
+    --gray: #6b7280;
+
+    --light: #f6f8fc;
+
+    --border: #e5e7eb;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--light);
+
+    color: var(--black);
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.screen {
+    min-height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 20px;
+}
+
+
+.auth-card {
+    width: min(430px, 100%);
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.12);
+}
+
+
+.brand-mark {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 17px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            var(--blue)
+        );
+
+    margin-bottom: 18px;
+}
+
+
+.brand-mark.small {
+    width: 38px;
+    height: 38px;
+
+    font-size: 14px;
+
+    border-radius: 10px;
+
+    margin: 0;
+}
+
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+
+.muted {
+    color: var(--gray);
+}
+
+
+.small {
+    font-size: 13px;
+}
+
+
+label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin: 16px 0;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    margin-top: 7px;
+
+    padding: 12px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 12px;
+
+    background: white;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(7,87,213,.12);
+}
+
+
+.primary,
+.secondary,
+.ghost {
+    padding: 11px 16px;
+
+    border-radius: 11px;
+
+    font-weight: 800;
+}
+
+
+.primary {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--red),
+            var(--blue)
+        );
+}
+
+
+.secondary {
+    color: var(--dark-blue);
+
+    background: #eaf0ff;
+}
+
+
+.ghost {
+    background: transparent;
+
+    color: var(--black);
+}
+
+
+.topbar {
+    height: 70px;
+
+    background: white;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 24px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: 900;
+}
+
+
+.top-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.user-badge {
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+.layout {
+    display: flex;
+
+    min-height:
+        calc(100vh - 70px);
+}
+
+
+.sidebar {
+    width: 230px;
+
+    background: white;
+
+    border-right:
+        1px solid
+        var(--border);
+
+    padding: 18px 12px;
+}
+
+
+.nav {
+    width: 100%;
+
+    display: block;
+
+    text-align: left;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    margin-bottom: 5px;
+
+    font-weight: 700;
+}
+
+
+.nav:hover,
+.nav.active {
+    background: #edf3ff;
+
+    color: var(--dark-blue);
+}
+
+
+.content {
+    flex: 1;
+
+    max-width: 1200px;
+
+    width: 100%;
+
+    padding: 30px;
+
+    margin: auto;
+}
+
+
+.panel {
+    display: none;
+}
+
+
+.panel.active {
+    display: block;
+}
+
+
+.heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+.stat,
+.card {
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 7px 25px
+        rgba(0,0,0,.06);
+}
+
+
+.stat span {
+    display: block;
+
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+.stat strong {
+    display: block;
+
+    font-size: 32px;
+
+    margin-top: 8px;
+}
+
+
+.quick {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.two {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.editor-actions {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.post-list,
+.admin-list {
+    display: grid;
+
+    gap: 12px;
+}
+
+
+.post-item,
+.admin-item {
+    background: white;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 15px;
+
+    padding: 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.post-item h3 {
+    margin-bottom: 5px;
+}
+
+
+.meta {
+    font-size: 13px;
+
+    color: var(--gray);
+}
+
+
+.item-actions {
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+
+.badge {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    border-radius: 999px;
+
+    background: #edf3ff;
+
+    color: var(--dark-blue);
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.message {
+    min-height: 20px;
+
+    color: var(--dark-blue);
+
+    font-weight: 700;
+}
+
+
+.message.error {
+    color: var(--dark-red);
+}
+
+
+@media (max-width: 760px) {
+
+    .layout {
+        display: block;
+    }
+
+
+    .sidebar {
+        width: 100%;
+
+        display: flex;
+
+        overflow-x: auto;
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid
+            var(--border);
+    }
+
+
+    .nav {
+        min-width: max-content;
+    }
+
+
+    .content {
+        padding: 18px;
+    }
+
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .two {
+        grid-template-columns: 1fr;
+    }
+
+
+    .topbar {
+        padding: 0 14px;
+    }
+
+
+    .user-badge {
+        display: none;
+    }
+
+
+    .post-item,
+    .admin-item {
+        display: block;
+    }
+
+
+    .item-actions {
+        margin-top: 12px;
+    }
+}

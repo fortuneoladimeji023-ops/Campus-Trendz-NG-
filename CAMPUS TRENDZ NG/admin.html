@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Trendz NG™ | Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN ================= -->
+
+    <div id="loginView" class="screen">
+
+        <div class="auth-card">
+
+            <div class="brand-mark">CT</div>
+
+            <h1>Campus Trendz NG™</h1>
+
+            <p class="muted">
+                Secure Admin Dashboard
+            </p>
+
+            <form id="loginForm">
+
+                <label>
+                    Email
+                    <input
+                        id="loginEmail"
+                        type="email"
+                        placeholder="admin@email.com"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Password
+                    <input
+                        id="loginPassword"
+                        type="password"
+                        placeholder="Your password"
+                        required
+                    >
+                </label>
+
+                <button class="primary" type="submit">
+                    Sign In
+                </button>
+
+                <p id="loginMessage" class="message"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ADMIN APP ================= -->
+
+    <div id="appView" class="hidden">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <span class="brand-mark small">
+                    CT
+                </span>
+
+                <span>
+                    Campus Trendz NG™
+                </span>
+
+            </div>
+
+            <div class="top-actions">
+
+                <span id="userBadge"
+                      class="user-badge">
+                </span>
+
+                <button id="logoutBtn"
+                        class="ghost">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <div class="layout">
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+                <button
+                    class="nav active"
+                    data-panel="dashboard">
+                    📊 Dashboard
+                </button>
+
+                <button
+                    class="nav"
+                    data-panel="posts">
+                    📝 Posts
+                </button>
+
+                <button
+                    class="nav"
+                    data-panel="newPost">
+                    ➕ New Post
+                </button>
+
+                <button
+                    class="nav super-only"
+                    data-panel="admins">
+                    👥 Admins
+                </button>
+
+            </aside>
+
+
+            <!-- MAIN CONTENT -->
+
+            <main class="content">
+
+
+                <!-- DASHBOARD -->
+
+                <section
+                    id="dashboard"
+                    class="panel active">
+
+                    <div class="heading">
+
+                        <div>
+
+                            <h2>
+                                Dashboard
+                            </h2>
+
+                            <p class="muted">
+                                Welcome back. Manage
+                                Campus Trendz from here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stats">
+
+                        <div class="stat">
+
+                            <span>
+                                Published
+                            </span>
+
+                            <strong id="publishedCount">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span>
+                                Drafts
+                            </span>
+
+                            <strong id="draftCount">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span>
+                                Admins
+                            </span>
+
+                            <strong id="adminCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>
+                            Quick Actions
+                        </h3>
+
+                        <div class="quick">
+
+                            <button
+                                class="primary"
+                                data-go="newPost">
+                                Create a Post
+                            </button>
+
+                            <button
+                                class="secondary"
+                                data-go="posts">
+                                Manage Posts
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- POSTS -->
+
+                <section
+                    id="posts"
+                    class="panel">
+
+                    <div class="heading">
+
+                        <div>
+
+                            <h2>
+                                Posts
+                            </h2>
+
+                            <p class="muted">
+                                Edit, publish or delete
+                                your content.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="primary"
+                            data-go="newPost">
+                            + New Post
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="postsList"
+                        class="post-list">
+                    </div>
+
+                </section>
+
+
+
+                <!-- CREATE POST -->
+
+                <section
+                    id="newPost"
+                    class="panel">
+
+                    <div class="heading">
+
+                        <div>
+
+                            <h2 id="editorTitle">
+                                Create Post
+                            </h2>
+
+                            <p class="muted">
+                                Publish campus news,
+                                facts, competitions
+                                and updates.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        id="postForm"
+                        class="card editor">
+
+                        <input
+                            id="postId"
+                            type="hidden">
+
+
+                        <label>
+
+                            Headline
+
+                            <input
+                                id="title"
+                                maxlength="180"
+                                placeholder="Enter your headline"
+                                required>
+
+                        </label>
+
+
+                        <div class="two">
+
+                            <label>
+
+                                Category
+
+                                <select id="category">
+
+                                    <option>
+                                        Campus News
+                                    </option>
+
+                                    <option>
+                                        Trending
+                                    </option>
+
+                                    <option>
+                                        Crazy Facts
+                                    </option>
+
+                                    <option>
+                                        Competition
+                                    </option>
+
+                                    <option>
+                                        Poll
+                                    </option>
+
+                                    <option>
+                                        Entertainment
+                                    </option>
+
+                                    <option>
+                                        Announcement
+                                    </option>
+
+                                </select>
+
+                            </label>
+
+
+                            <label>
+
+                                Author Name
+
+                                <input
+                                    id="authorName"
+                                    maxlength="80"
+                                    placeholder="Your name">
+
+                            </label>
+
+                        </div>
+
+
+                        <label>
+
+                            Featured Image
+
+                            <input
+                                id="imageFile"
+                                type="file"
+                                accept="image/jpeg,image/png,image/webp">
+
+                            <small
+                                id="imageStatus"
+                                class="muted">
+
+                                Optional.
+                                JPG, PNG or WebP.
+                                Maximum 5MB.
+
+                            </small>
+
+                        </label>
+
+
+                        <label>
+
+                            Article
+
+                            <textarea
+                                id="body"
+                                rows="16"
+                                maxlength="20000"
+                                placeholder="Write your article here..."
+                                required>
+                            </textarea>
+
+                        </label>
+
+
+                        <div class="editor-actions">
+
+                            <button
+                                type="button"
+                                id="saveDraftBtn"
+                                class="secondary">
+
+                                Save Draft
+
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                class="primary">
+
+                                Publish Post 🚀
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                id="cancelEditBtn"
+                                class="ghost">
+
+                                Clear
+
+                            </button>
+
+                        </div>
+
+
+                        <p
+                            id="postMessage"
+                            class="message">
+                        </p>
+
+                    </form>
+
+                </section>
+
+
+
+                <!-- ADMIN MANAGEMENT -->
+
+                <section
+                    id="admins"
+                    class="panel">
+
+                    <div class="heading">
+
+                        <div>
+
+                            <h2>
+                                Admin Team
+                            </h2>
+
+                            <p class="muted">
+                                Create and manage
+                                your Campus Trendz crew.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        id="adminForm"
+                        class="card">
+
+                        <div class="two">
+
+                            <label>
+
+                                Name
+
+                                <input
+                                    id="adminName"
+                                    maxlength="80"
+                                    required>
+
+                            </label>
+
+
+                            <label>
+
+                                Email
+
+                                <input
+                                    id="adminEmail"
+                                    type="email"
+                                    required>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="two">
+
+                            <label>
+
+                                Temporary Password
+
+                                <input
+                                    id="adminPassword"
+                                    type="password"
+                                    minlength="8"
+                                    required>
+
+                            </label>
+
+
+                            <label>
+
+                                Role
+
+                                <select id="adminRole">
+
+                                    <option value="contentAdmin">
+                                        Content Admin
+                                    </option>
+
+                                    <option value="editor">
+                                        Editor
+                                    </option>
+
+                                </select>
+
+                            </label>
+
+                        </div>
+
+
+                        <button
+                            class="primary"
+                            type="submit">
+
+                            Create Admin Account
+
+                        </button>
+
+
+                        <p class="muted small">
+
+                            Give the crew member
+                            their temporary password
+                            securely.
+
+                        </p>
+
+
+                        <p
+                            id="adminMessage"
+                            class="message">
+                        </p>
+
+                    </form>
+
+
+                    <div
+                        id="adminsList"
+                        class="admin-list">
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <script
+        type="module"
+        src="admin.js">
+    </script>
+
+</body>
+</html>

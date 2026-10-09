@@ -1,0 +1,153 @@
+rules_version = '2';
+
+service cloud.firestore {
+
+    match /databases/{database}/documents {
+
+
+        function signedIn() {
+
+            return request.auth != null;
+
+        }
+
+
+        function myUser() {
+
+            return get(
+                /databases/$(database)/documents/users/$(request.auth.uid)
+            ).data;
+
+        }
+
+
+        function isAdmin() {
+
+            return signedIn() &&
+                myUser().role in [
+                    'superAdmin',
+                    'contentAdmin',
+                    'editor'
+                ];
+
+        }
+
+
+        function isSuperAdmin() {
+
+            return signedIn() &&
+                myUser().role ==
+                'superAdmin';
+
+        }
+
+
+
+        /* USERS */
+
+        match /users/{uid} {
+
+            allow read:
+                if isSuperAdmin()
+                ||
+                (
+                    signedIn() &&
+                    request.auth.uid == uid
+                );
+
+
+            allow create:
+                if isSuperAdmin();
+
+
+            allow update:
+                if isSuperAdmin();
+
+
+            allow delete:
+                if isSuperAdmin();
+
+        }
+
+
+
+        /* POSTS */
+
+        match /posts/{postId} {
+
+
+            /*
+                Public users can see
+                published posts.
+            */
+
+            allow read:
+                if resource.data.status ==
+                'published'
+                ||
+                isAdmin();
+
+
+
+            /*
+                Admins can create posts.
+            */
+
+            allow create:
+                if isAdmin()
+                &&
+                request.resource.data.authorUid ==
+                request.auth.uid;
+
+
+
+            /*
+                Super Admin can edit anything.
+
+                Content Admin can edit anything.
+
+                Editor can only edit
+                their own post.
+            */
+
+            allow update:
+                if isSuperAdmin()
+                ||
+                (
+                    isAdmin()
+                    &&
+                    myUser().role ==
+                    'contentAdmin'
+                )
+                ||
+                (
+                    isAdmin()
+                    &&
+                    myUser().role ==
+                    'editor'
+                    &&
+                    resource.data.authorUid ==
+                    request.auth.uid
+                );
+
+
+
+            /*
+                Editors cannot delete.
+            */
+
+            allow delete:
+                if isSuperAdmin()
+                ||
+                (
+                    isAdmin()
+                    &&
+                    myUser().role ==
+                    'contentAdmin'
+                );
+
+        }
+
+    }
+
+}
